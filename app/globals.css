@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-primary: #222222;
+  --color-white: #ffffff;
+  --color-light: #F5F4F1;
+  --max-width-container: 87em;
+
+  /* Aspect ratios */
+  --aspect-hero: 920/560;      /* Figmaより */
+  --aspect-portrait: 4/5;      /* 448/560 = 0.8 = 4/5 */
+  --aspect-article: 448/336;   /* ブログ記事サムネイル */
+  --aspect-testimonial: 3/4;   /* Testimonialセクション */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 150%;
+  color: var(--color-primary);
+  background-color: var(--color-white);
 }
+
+/* Typography - デスクトップ */
+h1 { font-family: var(--font-heading); font-size: 4.5rem; line-height: 110%; letter-spacing: -0.03em; }
+h2 { font-family: var(--font-heading); font-size: 3.5rem; line-height: 110%; letter-spacing: -0.03em; }
+h3 { font-family: var(--font-heading); font-size: 2.75rem; line-height: 110%; letter-spacing: -0.03em; }
+h4 { font-family: var(--font-heading); font-size: 2.25rem; line-height: 110%; letter-spacing: -0.02em; }
+h5 { font-family: var(--font-body); font-size: 1.25rem; line-height: 130%; letter-spacing: -0.02em; font-weight: 500; }
+
+/* Typography - モバイル */
+@media (max-width: 1024px) {
+  body { font-size: 0.875rem; }
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2.25rem; }
+  h3 { font-size: 2.25rem; }
+  h4 { font-size: 1.5rem; }
+  h5 { font-size: 1rem; }
+  .large { font-size: 1.25rem; }
+}
+
+.subheading { font-family: var(--font-body); font-size: 1.125rem; line-height: 140%; }
+.label { font-family: var(--font-mono); font-size: 0.75rem; line-height: 140%; letter-spacing: 0.08em; text-transform: uppercase; }
+.links { font-family: var(--font-body); font-size: 0.875rem; line-height: 150%; }
+.links-underline { font-family: var(--font-body); font-size: 0.875rem; line-height: 150%; text-decoration: underline; }
+small { font-family: var(--font-body); font-size: 0.75rem; line-height: 150%; }
+.large { font-family: var(--font-body); font-size: 1rem; line-height: 120%; }
+
+/* Aspect ratios */
+.aspect-hero { aspect-ratio: 920/560; }
+.aspect-portrait { aspect-ratio: 4/5; }
+.aspect-article { aspect-ratio: 448/336; }
+.aspect-testimonial { aspect-ratio: 3/4; }
+
+/* UI */
+.bar { display: block; height: 2px; background-color: var(--color-primary); transition: all 0.3s; }
+
+/* App UI Typography */
+.app-name { font-size: 1rem; line-height: 140%; font-weight: 500; }
+.app-subtitle { font-size: 0.875rem; line-height: 140%; @apply text-primary/50; }
+.app-item { font-size: 1.125rem; line-height: 140%; font-weight: 500; }
+.app-body { font-size: 0.875rem; line-height: 140%; }
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.menu-enter { animation: fadeIn 0.2s ease-out; }
