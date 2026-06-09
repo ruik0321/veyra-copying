@@ -16,7 +16,7 @@ export default function SupportFooter({ reversed = false }: SupportFooterProps) 
               className={`w-12 h-12 rounded-full overflow-hidden border-2 -ml-2 first:ml-0 ${reversed ? "border-primary" : "border-light"}`}
             >
               <Image
-                src={`/images/portrait0${i}.jpg`}
+                src={`/images/Portrait0${i}.jpg`}
                 alt={`Support ${i}`}
                 width={64}
                 height={64}
