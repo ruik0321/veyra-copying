@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Veyra — Figma → Next.js 模写
 
-## Getting Started
+フロントエンドエンジニアとしてのポートフォリオ制作として、FigmaテンプレートをNext.jsで模写したプロジェクトです。
 
-First, run the development server:
+🔗 **デモ:** https://veyra-copying-rui-s-projects8.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 技術スタック
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js 15**（App Router）
+- **TypeScript**
+- **Tailwind CSS v4**
+- **Vercel**（デプロイ）
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 工夫した点
 
-## Learn More
+- FigmaデザインをピクセルレベルでNext.jsに再現
+- Tailwind CSS v4の `@theme` を活用したデザイントークン管理
+- モバイルファーストのレスポンシブ対応
+- カスタムタイポグラフィシステム（Libre Caslon Condensed）
+- スライダー・アコーディオン・ハンバーガーメニューなどのインタラクション実装
 
-To learn more about Next.js, take a look at the following resources:
+## セクション構成
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Header · Hero · Features · Testimonials · Pricing · News · FAQ · Footer
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## スクリーンショット
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| PC | スマホ |
+|----|--------|
+| ![Desktop](./screenshots/screenshotsPC_20260610) | ![Mobile](./screenshots/screenshotsSP_20260610) |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 参考デザイン
+
+Figmaテンプレート：[Veyra by UI Deli](https://www.figma.com/community/file/1543272259497127968)
