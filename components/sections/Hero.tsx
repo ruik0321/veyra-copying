@@ -39,7 +39,7 @@ export default function Hero() {
                     className="w-12 h-12 rounded-full border border-light overflow-hidden -ml-2 first:ml-0"
                   >
                     <Image
-                      src={`/images/portrait0${i}.jpg`}
+                      src={`/images/Portrait0${i}.jpg`}
                       alt={`Leader ${i}`}
                       width={64}
                       height={64}
