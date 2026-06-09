@@ -31,7 +31,7 @@ Header · Hero · Features · Testimonials · Pricing · News · FAQ · Footer
 
 | PC | スマホ |
 |----|--------|
-| ![Desktop](./screenshots/screenshotsPC_20260610) | ![Mobile](./screenshots/screenshotsSP_20260610) |
+| ![Desktop](./screenshots/screenshotsPC_20260610.png) | ![Mobile](./screenshots/screenshotsSP_20260610.png) |
 
 ---
 
